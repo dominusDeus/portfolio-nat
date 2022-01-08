@@ -1,5 +1,8 @@
 import { useUser } from '@auth0/nextjs-auth0';
 import Redirect from '@/components/shared/Redirect';
+import BaseLayout from '@/components/layouts/BaseLayout';
+import BasePage from '@/components/BasePage';
+
 
 
 const withAuth = (Component) => {
@@ -7,7 +10,11 @@ const withAuth = (Component) => {
     const { user, isLoading } = useUser();
   
     if (isLoading) {
-      return <p>loading...</p>
+      <BaseLayout user={user} loading={isLoading}>
+        <BasePage>
+          return <p>loading...</p>
+        </BasePage>
+      </BaseLayout>
     }
 
     if(!user) {
