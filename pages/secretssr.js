@@ -29,8 +29,7 @@ export const getServerSideProps =  withPageAuthRequired({
   async getServerSideProps(ctx) {
     const session = getSession(ctx.req, ctx.res);
     const resTitle = await getTitle();
-    console.log(resTitle);
-    console.log(session)
+    console.log(session);
       
     if (!session || !session.user) {
       ctx.res.writeHead(302, {

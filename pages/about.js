@@ -4,6 +4,7 @@ import { useUser } from '@auth0/nextjs-auth0';
 
 const About = () => {
   const { user, isLoading } = useUser();
+  debugger;
 
   return(
     <>
