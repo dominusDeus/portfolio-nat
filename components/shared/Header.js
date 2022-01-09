@@ -20,7 +20,7 @@ const BsNavLink = props => {
 
 const BsNavBrand = () =>
   <Link href="/">
-    <a className="navbar-brand port-navbar-brand">Natalia Carrera</a>
+    <a className="navbar-brand port-navbar-brand">Natalia</a>
   </Link>
 
 const LoginLink = _ =>  <a className="nav-link port-navbar-link clickable" href="/api/auth/login">Login</a>
@@ -62,6 +62,9 @@ const Header = ({user, loading}) => {
             </NavItem>
             <NavItem className="port-navbar-item">
               <BsNavLink href="/secretssr" title="secretssr"/>
+            </NavItem>
+            <NavItem className="port-navbar-item">
+              <BsNavLink href="/onlyAdmin" title="Admin"/>
             </NavItem>
           </Nav>
           <Nav navbar>

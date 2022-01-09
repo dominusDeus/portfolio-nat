@@ -25,3 +25,6 @@ export const useGetPostById = (id) => {
   return {data, error, loading: !data && !error, ...rest}
 }
 
+export const isAuthorized = (user, role) => {
+  return (user && user['https://portfolio-nat.com' + '/roles'].includes(role)) 
+}
